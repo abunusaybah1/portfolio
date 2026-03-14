@@ -3,10 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "../../../lib/data";
 import type { Metadata } from "next";
-
-interface ProjectPageProps {
-  params: Promise<{ slug: string }>;
-}
+import { ProjectPageProps } from "@/types";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -27,7 +24,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} - John Doe Portfolio`,
+    title: `${project.title} - Ismail Abdulmatiin's Portfolio`,
     description: project.description,
   };
 }
@@ -145,10 +142,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 Project Overview
               </h2>
               <p className="text-gray-600 dark:text-gray-400">
-                This project demonstrates modern web development practices with
-                a focus on user experience, performance, and maintainable code.
-                Built using cutting-edge technologies and following industry
-                best practices.
+                {project.overview}
               </p>
             </div>
           </div>

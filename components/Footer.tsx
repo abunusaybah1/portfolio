@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row md:justify-between gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4 text-white dark:text-gray-100">
               {personalInfo.name}
@@ -18,7 +18,7 @@ export default function Footer() {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
+                className="text-gray-200 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
               >
                 GitHub
               </a>
@@ -26,7 +26,7 @@ export default function Footer() {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
+                className="text-gray-200 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
               >
                 LinkedIn
               </a>
@@ -81,7 +81,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center text-gray-400 dark:text-gray-300">
-          <p>&copy; 2024 {personalInfo.name}. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} | {personalInfo.name}
+          </p>
         </div>
       </div>
     </footer>

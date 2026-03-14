@@ -5,6 +5,7 @@ export type Project = {
   technologies: string[];
   github: string;
   demo: string;
+  overview: string;
   image: string;
   featured: boolean;
   slug: string;
@@ -24,3 +25,17 @@ export type Experience = {
   description: string;
   technologies: string[];
 };
+
+export interface GithubRepo {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+  language: string;
+  stargazers_count: number;
+  updated_at: string;
+}
+
+export interface ProjectPageProps {
+  params: Promise<{ slug: string }>;
+}

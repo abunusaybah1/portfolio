@@ -2,26 +2,36 @@
 
 A production-grade developer portfolio platform built with Next.js 16, TypeScript, and Tailwind CSS.
 
+## ✨ Recent Updates
+
+- **Flexbox Layouts**: Converted all CSS Grid layouts to modern flexbox
+- **Simplified Theming**: Removed dark mode toggle for cleaner codebase
+- **Updated Dependencies**: Latest Next.js 16.1.6 and React 19.2.3
+- **Enhanced Responsiveness**: Improved mobile-first flexbox layouts
+
 ## 🚀 Features
 
-- **Modern Tech Stack**: Next.js 16 with App Router, TypeScript, and Tailwind CSS
-- **Responsive Design**: Fully responsive across all devices
-- **Dark Mode**: Automatic dark mode support with manual toggle
+- **Modern Tech Stack**: Next.js 16 with App Router, TypeScript, and Tailwind CSS 4.x
+- **Responsive Design**: Fully responsive across all devices with flexbox layouts
 - **SEO Optimized**: Server-side rendering and optimized metadata
 - **Performance Focused**: Image optimization, code splitting, and lazy loading
 - **Accessibility**: Semantic HTML and ARIA compliance
 - **Animations**: Smooth CSS animations and transitions
-- **Project Filtering**: Filter projects by technology stack
+- **Project Showcase**: Featured projects and detailed project pages
 - **GitHub Integration**: Display latest GitHub repositories
 - **Contact Form**: Functional contact form with validation
+- **Flexbox Layouts**: All layouts use modern flexbox instead of CSS Grid
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4.x
+- **Framework**: Next.js 16.1.6 (App Router)
+- **Language**: TypeScript 5.x
+- **Styling**: Tailwind CSS 4.x with PostCSS
+- **Runtime**: React 19.2.3
 - **Fonts**: Geist Sans & Geist Mono
 - **Icons**: Custom SVG icons
+- **Layout**: Flexbox (no CSS Grid)
+- **Build Tools**: ESLint, Babel Compiler
 - **Deployment**: Vercel-ready
 
 ## 📁 Project Structure
@@ -34,21 +44,28 @@ portfolio/
 │   ├── projects/       # Projects listing and detail pages
 │   ├── layout.tsx      # Root layout with navigation
 │   ├── page.tsx        # Homepage
-│   └── globals.css     # Global styles and animations
+│   ├── globals.css     # Global styles and animations
+│   └── favicon.ico     # Site favicon
 ├── components/
 │   ├── Header.tsx      # Navigation header
 │   ├── Hero.tsx        # Hero section
-│   ├── Skills.tsx      # Skills showcase
-│   ├── FeaturedProjects.tsx # Featured projects
-│   ├── GitHubRepos.tsx # GitHub repositories
-│   ├── Footer.tsx      # Site footer
-│   └── ThemeToggle.tsx # Dark mode toggle
+│   ├── Skills.tsx      # Skills showcase (flexbox layout)
+│   ├── FeaturedProjects.tsx # Featured projects (flexbox layout)
+│   ├── GitHubRepos.tsx # GitHub repositories (flexbox layout)
+│   ├── Footer.tsx      # Site footer (flexbox layout)
+│   ├── ThemeProvider.tsx # Theme context (currently unused)
+│   └── ThemeToggle.tsx # Theme toggle component (currently unused)
 ├── lib/
 │   └── data.ts         # Static data (projects, skills, etc.)
 ├── types/
 │   └── index.ts        # TypeScript type definitions
-└── public/
-    └── images/         # Static assets
+├── public/             # Static assets
+├── next.config.ts      # Next.js configuration
+├── tailwind.config.ts  # Tailwind CSS configuration
+├── postcss.config.mjs  # PostCSS configuration
+├── eslint.config.mjs   # ESLint configuration
+├── tsconfig.json       # TypeScript configuration
+└── package.json        # Dependencies and scripts
 ```
 
 ## 🏃‍♂️ Getting Started
@@ -104,9 +121,18 @@ Update `lib/data.ts` with your personal information, projects, skills, and exper
 
 ### Styling
 
-- Modify Tailwind classes in components
+- Modify Tailwind classes in components (all layouts use flexbox)
 - Update color scheme in `globals.css`
 - Add custom animations in `globals.css`
+- Adjust flexbox responsive breakpoints as needed
+
+### Layout System
+
+This portfolio uses **flexbox exclusively** for all layouts:
+
+- Mobile: `flex-col` (vertical stacking)
+- Tablet+: `flex-row` with `flex-wrap` (horizontal with wrapping)
+- Desktop: `justify-between` for even spacing
 
 ### Content
 
@@ -129,6 +155,13 @@ Update `lib/data.ts` with your personal information, projects, skills, and exper
 - ESLint configuration for code linting
 - TypeScript strict mode enabled
 - Prettier for code formatting
+
+### Layout System
+
+- **Flexbox Only**: All layouts use flexbox instead of CSS Grid
+- **Responsive Breakpoints**: Mobile-first approach with `md:` and `lg:` prefixes
+- **Flex Utilities**: `flex-1`, `flex-wrap`, `justify-between` for layout control
+- **Gap Spacing**: Consistent `gap-8` spacing between flex items
 
 ### Performance
 

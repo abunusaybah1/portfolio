@@ -1,19 +1,11 @@
 "use client";
 
+import { personalInfo } from "@/lib/data";
+import { GithubRepo } from "@/types";
 import { useState, useEffect } from "react";
 
-interface GitHubRepo {
-  id: number;
-  name: string;
-  description: string;
-  html_url: string;
-  language: string;
-  stargazers_count: number;
-  updated_at: string;
-}
-
 export default function GitHubRepos() {
-  const [repos, setRepos] = useState<GitHubRepo[]>([]);
+  const [repos, setRepos] = useState<GithubRepo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,19 +52,19 @@ export default function GitHubRepos() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between gap-8">
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg p-6 animate-pulse"
+                className="bg-linear-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg p-6 animate-pulse md:flex-1 md:max-w-sm lg:max-w-none"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="h-6 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded mb-3"></div>
-                <div className="h-4 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded mb-4"></div>
-                <div className="h-4 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded w-3/4 mb-4"></div>
+                <div className="h-6 bg-linear-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded mb-3"></div>
+                <div className="h-4 bg-linear-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded mb-4"></div>
+                <div className="h-4 bg-linear-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded w-3/4 mb-4"></div>
                 <div className="flex justify-between items-center">
-                  <div className="h-6 w-16 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded-full"></div>
-                  <div className="h-4 w-12 bg-gradient-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded"></div>
+                  <div className="h-6 w-16 bg-linear-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded-full"></div>
+                  <div className="h-4 w-12 bg-linear-to-r from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-500 rounded"></div>
                 </div>
               </div>
             ))}
@@ -84,7 +76,7 @@ export default function GitHubRepos() {
 
   if (error) {
     return (
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <section className="py-24 bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">
             Latest GitHub Repositories
@@ -98,7 +90,7 @@ export default function GitHubRepos() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+    <section className="py-24 bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -120,11 +112,11 @@ export default function GitHubRepos() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between gap-8">
           {repos.map((repo, index) => (
             <div
               key={repo.id}
-              className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in border border-gray-100 dark:border-gray-700"
+              className="group bg-linear-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in border border-gray-100 dark:border-gray-700 md:flex-1 md:max-w-sm lg:max-w-none"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="p-6">
@@ -152,7 +144,7 @@ export default function GitHubRepos() {
 
                 <div className="flex items-center justify-between mb-6">
                   {repo.language && (
-                    <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full shadow-sm">
+                    <span className="px-3 py-1 bg-linear-to-r from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full shadow-sm">
                       {repo.language}
                     </span>
                   )}
@@ -165,7 +157,7 @@ export default function GitHubRepos() {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group-hover:shadow-blue-500/25"
+                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group-hover:shadow-blue-500/25"
                 >
                   <span>View Repository</span>
                   <svg
@@ -190,10 +182,10 @@ export default function GitHubRepos() {
         {/* Call to action */}
         <div className="text-center mt-16 animate-slide-in-right">
           <a
-            href="https://github.com/abunusaybah1"
+            href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-gray-500/25"
+            className="inline-flex items-center px-8 py-4 bg-linear-to-r from-gray-900 to-gray-700 dark:from-gray-700 dark:to-gray-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-gray-500/25"
           >
             <svg
               className="w-5 h-5 mr-3"

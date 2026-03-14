@@ -4,7 +4,7 @@ import { projects } from "../../lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects - John Doe Portfolio",
+  title: "Projects - Ismail Abdulmatiin's Portfolio",
   description:
     "Explore my portfolio of web development projects showcasing modern technologies and best practices.",
 };
@@ -21,13 +21,12 @@ export default function ProjectsPage() {
           My Projects
         </h1>
 
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between gap-8">
           {projects.map((project) => (
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 md:flex-1 md:max-w-sm lg:max-w-none"
             >
               <div className="relative h-48">
                 <Image

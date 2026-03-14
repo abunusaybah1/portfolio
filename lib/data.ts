@@ -9,6 +9,8 @@ export const projects: Project[] = [
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
     github: "https://github.com/username/ecommerce-platform",
     demo: "https://ecommerce-demo.vercel.app",
+    overview:
+      "This project demonstrates modern web development practices with a focus on user experience, performance, and maintainable code. Built using cutting-edge technologies and following industry best practices.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
     featured: true,
@@ -32,6 +34,7 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
     featured: true,
     slug: "task-management-app",
+    overview: "",
   },
   {
     id: "3",
@@ -45,42 +48,42 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
     featured: false,
     slug: "weather-dashboard",
+    overview: "",
   },
   // Add more projects as needed
 ];
 
 export const skills: Skill[] = [
-  { category: "Frontend", name: "React", level: 5 },
+  { category: "Frontend", name: "React.js", level: 5 },
   { category: "Frontend", name: "Next.js", level: 5 },
-  { category: "Frontend", name: "TypeScript", level: 4 },
+  { category: "Frontend", name: "TypeScript", level: 5 },
   { category: "Frontend", name: "Tailwind CSS", level: 5 },
-  { category: "Backend", name: "Node.js", level: 4 },
-  { category: "Backend", name: "Express", level: 4 },
-  { category: "Database", name: "MongoDB", level: 4 },
-  { category: "Database", name: "PostgreSQL", level: 3 },
-  { category: "Tools", name: "Git", level: 5 },
-  { category: "Tools", name: "Docker", level: 3 },
+  { category: "Tools", name: "Git/GitHub", level: 5 },
+  { category: "Frontend", name: "Sass", level: 3 },
+  { category: "Tools", name: "Visual Studio Code", level: 5 },
+  { category: "Tools", name: "Figma", level: 4 },
+  { category: "Frontend", name: "React Native", level: 4 },
 ];
 
 export const experiences: Experience[] = [
-  {
-    id: "1",
-    role: "Senior Frontend Developer",
-    company: "Tech Corp",
-    period: "2022 - Present",
-    description:
-      "Led development of multiple React applications, mentored junior developers, and implemented best practices for code quality and performance.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-  },
-  {
-    id: "2",
-    role: "Frontend Developer",
-    company: "Startup Inc",
-    period: "2020 - 2022",
-    description:
-      "Developed responsive web applications using modern JavaScript frameworks, collaborated with design teams, and optimized application performance.",
-    technologies: ["React", "Vue.js", "Sass", "Webpack"],
-  },
+//   {
+//     id: "1",
+//     role: "Senior Frontend Developer",
+//     company: "Tech Corp",
+//     period: "2022 - Present",
+//     description:
+//       "Led development of multiple React applications, mentored junior developers, and implemented best practices for code quality and performance.",
+//     technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+//   },
+//   {
+//     id: "2",
+//     role: "Frontend Developer",
+//     company: "Startup Inc",
+//     period: "2020 - 2022",
+//     description:
+//       "Developed responsive web applications using modern JavaScript frameworks, collaborated with design teams, and optimized application performance.",
+//     technologies: ["React", "Vue.js", "Sass", "Webpack"],
+//   },
 ];
 
 export const personalInfo = {
@@ -89,8 +92,7 @@ export const personalInfo = {
   bio: "Passionate frontend developer with ~1 year of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
   email: "ayobamidolapo419@gmail.com",
   github: "https://github.com/abunusaybah1",
-  linkedin:
-    "https://www.linkedin.com/in/abdulmatiin-ismail-440aa7260/",
+  linkedin: "https://www.linkedin.com/in/abdulmatiin-ismail-440aa7260/",
   resume:
     "https://drive.google.com/file/d/12u6eE8Rh_-mRpCKIjPd8yPkNMpLwQ9xo/view?usp=drive_link",
 };

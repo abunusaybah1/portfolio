@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <section className="py-24 bg-linear-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
@@ -31,15 +31,15 @@ export default function FeaturedProjects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between gap-8">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in"
+              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in md:flex-1 md:max-w-sm lg:max-w-none"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative overflow-hidden rounded-t-2xl">
                 <div className="relative h-56 group-hover:scale-110 transition-transform duration-500">
@@ -53,7 +53,7 @@ export default function FeaturedProjects() {
                 </div>
 
                 {/* Featured badge */}
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                <div className="absolute top-4 right-4 bg-linear-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
                   Featured
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function FeaturedProjects() {
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/50 dark:to-purple-900/50 text-blue-800 dark:text-blue-200 text-sm rounded-full border border-blue-200 dark:border-blue-800 hover:scale-105 transition-transform"
+                      className="px-3 py-1 bg-linear-to-r from-blue-100 to-purple-100 dark:from-blue-900/50 dark:to-purple-900/50 text-blue-800 dark:text-blue-200 text-sm rounded-full border border-blue-200 dark:border-blue-800 hover:scale-105 transition-transform"
                     >
                       {tech}
                     </span>
@@ -97,7 +97,7 @@ export default function FeaturedProjects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-glow"
+                    className="group/btn flex items-center px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-glow"
                   >
                     <svg
                       className="w-4 h-4 mr-2 group-hover/btn:translate-x-1 transition-transform"
@@ -123,7 +123,7 @@ export default function FeaturedProjects() {
         <div className="text-center mt-16 animate-slide-in-left">
           <Link
             href="/projects"
-            className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl"
+            className="group inline-flex items-center px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl"
           >
             <span className="mr-2">View All Projects</span>
             <svg

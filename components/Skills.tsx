@@ -26,18 +26,18 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:justify-between gap-8">
           {categories.map((category, categoryIndex) => (
             <div
               key={category}
-              className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in"
+              className="group bg-linear-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in md:flex-1 md:max-w-sm lg:max-w-none"
               style={{ animationDelay: `${categoryIndex * 0.1}s` }}
             >
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {category}
                 </h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto group-hover:w-24 transition-all duration-300"></div>
+                <div className="w-16 h-1 bg-linear-to-r from-blue-500 to-purple-600 rounded-full mx-auto group-hover:w-24 transition-all duration-300"></div>
               </div>
 
               <div className="space-y-4">
@@ -62,7 +62,7 @@ export default function Skills() {
                       <div className="relative">
                         <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-1000 ease-out group-hover/skill:shadow-lg group-hover/skill:shadow-blue-500/50"
+                            className="h-full bg-linear-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-1000 ease-out group-hover/skill:shadow-lg group-hover/skill:shadow-blue-500/50"
                             style={{
                               width: `${(skill.level / 5) * 100}%`,
                               animationDelay: `${categoryIndex * 0.1 + skillIndex * 0.1 + 0.5}s`,
@@ -93,7 +93,7 @@ export default function Skills() {
 
         {/* Additional skills showcase */}
         <div className="mt-16 text-center animate-slide-in-right">
-          <div className="inline-flex flex-wrap justify-center gap-3 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl">
+          <div className="inline-flex flex-wrap justify-center gap-3 p-6 bg-linear-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl">
             {skills.slice(0, 8).map((skill, index) => (
               <span
                 key={skill.name}

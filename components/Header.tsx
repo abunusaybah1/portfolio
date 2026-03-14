@@ -21,25 +21,25 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="hover:scale-110 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
             >
               Home
             </Link>
             <Link
               href="/projects"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="hover:scale-110 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
             >
               Projects
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="hover:scale-110 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="hover:scale-110 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
             >
               Contact
             </Link>
@@ -48,7 +48,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button
-              className="p-2 rounded-md text-gray-700 dark:text-gray-300"
+              className="p-2 rounded-md text-gray-700 hover:text-gray-900 hover:font-bold hover:scale-110 transition-all duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg
@@ -78,28 +78,28 @@ export default function Header() {
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="hover:scale-90 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/projects"
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="hover:scale-90 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="hover:scale-90 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="hover:scale-90 hover:font-bold text-gray-700 hover:text-gray-900 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

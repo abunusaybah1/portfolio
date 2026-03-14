@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
+      <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-indigo-800 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
         <div className="absolute inset-0 bg-black/20"></div>
         {/* Floating particles effect */}
         <div className="absolute inset-0">
@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="animate-slide-up">
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 gradient-text">
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6">
             Hi, I'm {personalInfo.name}
           </h1>
           <p className="text-xl sm:text-3xl lg:text-4xl text-white/90 mb-8 font-light">
@@ -40,14 +40,14 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-bounce-in">
           <Link
             href="/projects"
-            className="group relative bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-2xl overflow-hidden"
+            className="group relative bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
           >
             <span className="relative z-10">View My Work</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
           </Link>
           <Link
             href={personalInfo.resume}
-            className="group relative border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-110 hover:bg-white hover:text-gray-900 hover:shadow-2xl"
+            className="group relative border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-gray-900 hover:shadow-2xl"
           >
             Download Resume
           </Link>

@@ -4,31 +4,18 @@ import { personalInfo } from "../../lib/data";
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  //   const [formData, setFormData] = useState({
+  //     name: "",
+  //     email: "",
+  //     message: "",
+  //   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-  };
+  {
+    /* Found in <Contact/> */
+  }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24 relative overflow-hidden">
+    <div className="flex min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
@@ -53,10 +40,10 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="m-auto flex flex-col lg:flex-row gap-12">
           {/* Contact Info Section */}
           <div className="animate-slide-in-left">
-            <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100 dark:border-gray-700">
+            <div className="bg-linear-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100 dark:border-gray-700">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Let's Connect
               </h2>
@@ -68,8 +55,8 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl border border-blue-200 dark:border-blue-800 animate-fade-in">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                <div className="flex items-center p-4 bg-linear-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl border border-blue-200 dark:border-blue-800 animate-fade-in">
+                  <div className="w-12 h-12 bg-linear-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -95,10 +82,10 @@ export default function ContactPage() {
                 </div>
 
                 <div
-                  className="flex items-center p-4 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl border border-gray-200 dark:border-gray-600 animate-fade-in"
+                  className="flex items-center p-4 bg-linear-to-r from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl border border-gray-200 dark:border-gray-600 animate-fade-in"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 bg-linear-to-r from-gray-700 to-gray-800 rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -123,10 +110,10 @@ export default function ContactPage() {
                 </div>
 
                 <div
-                  className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl border border-blue-200 dark:border-blue-800 animate-fade-in"
+                  className="flex items-center p-4 bg-linear-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl border border-blue-200 dark:border-blue-800 animate-fade-in"
                   style={{ animationDelay: "0.4s" }}
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 bg-linear-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -153,101 +140,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form Section */}
-          <div className="animate-slide-in-right">
-            <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100 dark:border-gray-700">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Send a Message
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="animate-fade-in">
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300 hover:shadow-md"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div
-                  className="animate-fade-in"
-                  style={{ animationDelay: "0.1s" }}
-                >
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300 hover:shadow-md"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div
-                  className="animate-fade-in"
-                  style={{ animationDelay: "0.2s" }}
-                >
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300 hover:shadow-md resize-none"
-                    placeholder="Tell me about your project or just say hello..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-bounce-in"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  <span className="flex items-center justify-center">
-                    Send Message
-                    <svg
-                      className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                      />
-                    </svg>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
+          {/* Code in   <Contact />*/}
         </div>
       </div>
     </div>
