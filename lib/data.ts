@@ -3,53 +3,33 @@ import { Project, Skill, Experience } from "../types";
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-Commerce Platform",
+    title: "Rezume",
     description:
-      "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    github: "https://github.com/username/ecommerce-platform",
-    demo: "https://ecommerce-demo.vercel.app",
+      " A modern resume builder application that allows users to create and customize their resumes with ease. It features a user-friendly interface, real-time preview, and various templates to choose from.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/abunusaybah1/rezume",
+    demo: "https://rezume-pi.vercel.app/",
     overview:
-      "This project demonstrates modern web development practices with a focus on user experience, performance, and maintainable code. Built using cutting-edge technologies and following industry best practices.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+      " Rezume is a user-friendly resume builder that simplifies the process of creating professional resumes. With a variety of templates and real-time preview, users can easily customize their resumes to stand out to potential employers.",
+    image: "/images/rezume.png",
     featured: true,
-    slug: "ecommerce-platform",
+    slug: "rezume",
   },
   {
     id: "2",
     title: "Task Management App",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "Socket.io",
-    ],
-    github: "https://github.com/username/task-manager",
-    demo: "https://taskmanager-demo.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+      " A collaborative task management application that allows teams to organize and track their work efficiently. It includes features like boards for organization,columns for tasks status and cards to hold task information.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/abunusaybah1/ckb",
+    demo: "https://ckb-nine.vercel.app/",
+    image: "/images/ckb.png",
     featured: true,
-    slug: "task-management-app",
-    overview: "",
+    slug: "ckb",
+    overview:
+      " CKB is a collaborative task management app designed to help teams organize and track their work efficiently. With features like boards, columns, and cards, CKB provides a flexible and intuitive way to manage projects and tasks, fostering better collaboration and productivity among team members.",
   },
-  {
-    id: "3",
-    title: "Weather Dashboard",
-    description:
-      "A responsive weather dashboard that displays current weather and forecasts using OpenWeatherMap API.",
-    technologies: ["React", "Chart.js", "Axios", "CSS Modules"],
-    github: "https://github.com/username/weather-dashboard",
-    demo: "https://weather-demo.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
-    featured: false,
-    slug: "weather-dashboard",
-    overview: "",
-  },
+
   // Add more projects as needed
 ];
 
@@ -61,33 +41,33 @@ export const skills: Skill[] = [
   { category: "Tools", name: "Git/GitHub", level: 5 },
   { category: "Frontend", name: "Sass", level: 3 },
   { category: "Tools", name: "Visual Studio Code", level: 5 },
-  { category: "Tools", name: "Figma", level: 4 },
+  { category: "Tools", name: "Figma", level: 3 },
   { category: "Frontend", name: "React Native", level: 4 },
 ];
 
 export const experiences: Experience[] = [
-//   {
-//     id: "1",
-//     role: "Senior Frontend Developer",
-//     company: "Tech Corp",
-//     period: "2022 - Present",
-//     description:
-//       "Led development of multiple React applications, mentored junior developers, and implemented best practices for code quality and performance.",
-//     technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-//   },
-//   {
-//     id: "2",
-//     role: "Frontend Developer",
-//     company: "Startup Inc",
-//     period: "2020 - 2022",
-//     description:
-//       "Developed responsive web applications using modern JavaScript frameworks, collaborated with design teams, and optimized application performance.",
-//     technologies: ["React", "Vue.js", "Sass", "Webpack"],
-//   },
+  //   {
+  //     id: "1",
+  //     role: "Senior Frontend Developer",
+  //     company: "Tech Corp",
+  //     period: "2022 - Present",
+  //     description:
+  //       "Led development of multiple React applications, mentored junior developers, and implemented best practices for code quality and performance.",
+  //     technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+  //   },
+  //   {
+  //     id: "2",
+  //     role: "Frontend Developer",
+  //     company: "Startup Inc",
+  //     period: "2020 - 2022",
+  //     description:
+  //       "Developed responsive web applications using modern JavaScript frameworks, collaborated with design teams, and optimized application performance.",
+  //     technologies: ["React", "Vue.js", "Sass", "Webpack"],
+  //   },
 ];
 
 export const personalInfo = {
-  name: "Ismail Abdulmatiin",
+  name: "Abdulmatiin",
   role: "Frontend Developer",
   bio: "Passionate frontend developer with ~1 year of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
   email: "ayobamidolapo419@gmail.com",

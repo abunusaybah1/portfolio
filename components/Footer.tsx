@@ -22,6 +22,7 @@ export default function Footer() {
               >
                 GitHub
               </a>
+              <span>|</span>
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
