@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ismail Abdulmatiin - Frontend Developer Portfolio",
+  title: "Abdulmatiin - Frontend Developer Portfolio",
   description:
     "Passionate frontend developer with ~1 year of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
   keywords: [
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     "experience",
     "contact",
   ],
-  authors: [{ name: "Ismail Abdulmatiin" }],
+  authors: [{ name: " Abdulmatiin" }],
   openGraph: {
-    title: "Ismail Abdulmatiin - Frontend Developer Portfolio",
+    title: " Abdulmatiin's Portfolio",
     description:
       "Passionate frontend developer with ~1 year of experience building scalable web applications.",
     type: "website",

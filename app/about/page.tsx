@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 // import Timeline from "./Timeline";
 
 export const metadata: Metadata = {
-  title: "About - Ismail Abdulmatiin's Portfolio",
+  title: "About -  Abdulmatiin's Portfolio",
   description:
     "Learn more about my background, experience, and journey as a frontend developer.",
 };

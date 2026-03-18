@@ -72,7 +72,7 @@ export const personalInfo = {
   bio: "Passionate frontend developer with ~1 year of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
   email: "ayobamidolapo419@gmail.com",
   github: "https://github.com/abunusaybah1",
-  linkedin: "https://www.linkedin.com/in/abdulmatiin-ismail-440aa7260/",
+  linkedin: "https://www.linkedin.com/in/abdulmatiin--440aa7260/",
   resume:
     "https://drive.google.com/file/d/12u6eE8Rh_-mRpCKIjPd8yPkNMpLwQ9xo/view?usp=drive_link",
 };

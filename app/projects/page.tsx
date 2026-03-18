@@ -4,7 +4,7 @@ import { projects } from "../../lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects - Ismail Abdulmatiin's Portfolio",
+  title: "Projects -  Abdulmatiin's Portfolio",
   description:
     "Explore my portfolio of web development projects showcasing modern technologies and best practices.",
 };

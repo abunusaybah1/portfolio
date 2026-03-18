@@ -24,7 +24,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} - Ismail Abdulmatiin's Portfolio`,
+    title: `${project.title} -  Abdulmatiin's Portfolio`,
     description: project.description,
   };
 }
