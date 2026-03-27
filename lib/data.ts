@@ -43,6 +43,7 @@ export const skills: Skill[] = [
   { category: "Tools", name: "Visual Studio Code", level: 5 },
   { category: "Tools", name: "Figma", level: 3 },
   { category: "Frontend", name: "React Native", level: 4 },
+  { category: "Frontend", name: "Zustand", level: 3 },
 ];
 
 export const experiences: Experience[] = [
@@ -69,10 +70,9 @@ export const experiences: Experience[] = [
 export const personalInfo = {
   name: "Abdulmatiin",
   role: "Frontend Developer",
-  bio: "Passionate frontend developer with ~1 year of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
+  bio: "Passionate frontend developer with 3+ years of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
   email: "ayobamidolapo419@gmail.com",
   github: "https://github.com/abunusaybah1",
   linkedin: "https://www.linkedin.com/in/abdulmatiin--440aa7260/",
-  resume:
-    "https://drive.google.com/file/d/12u6eE8Rh_-mRpCKIjPd8yPkNMpLwQ9xo/view?usp=drive_link",
+  resume: "files/Abdulmatiin resume.pdf",
 };

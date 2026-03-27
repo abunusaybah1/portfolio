@@ -67,7 +67,7 @@ export default function AboutPage() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-linear-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl p-6 text-center animate-fade-in border border-blue-200 dark:border-blue-800">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              ~1
+              3+
             </div>
             <div className="text-gray-700 dark:text-gray-300 font-medium">
               Years Experience

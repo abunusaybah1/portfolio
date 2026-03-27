@@ -45,12 +45,13 @@ export default function Hero() {
             <span className="relative z-10">View My Work</span>
             <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
           </Link>
-          <Link
+          <a
             href={personalInfo.resume}
+            download
             className="group relative border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-gray-900 hover:shadow-2xl"
           >
             Download Resume
-          </Link>
+          </a>
         </div>
 
         <div className="flex justify-center space-x-8 mt-16 animate-slide-in-left">
