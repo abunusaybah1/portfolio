@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "../lib/data";
+import { CgArrowRightR } from "react-icons/cg";
 
 export default function FeaturedProjects() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -105,6 +106,23 @@ export default function FeaturedProjects() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 bg-blue-500/10 rounded-lg py-12 animate-slide-up">
+          <div className="text-center animate-slide-up flex flex-col items-center gap-4">
+            <h2 className="text-4xl sm:text-5xl font-bold gradient-text">
+              Wait...
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              That's not all! Wanna see all my projects?
+            </p>
+
+            <Link
+              href="/projects"
+              className="items-center px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-fit flex gap-2"
+            >
+              View all projects <CgArrowRightR />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -29,8 +29,34 @@ export const projects: Project[] = [
     overview:
       " CKB is a collaborative task management app designed to help teams organize and track their work efficiently. With features like boards, columns, and cards, CKB provides a flexible and intuitive way to manage projects and tasks, fostering better collaboration and productivity among team members.",
   },
-
-  // Add more projects as needed
+  {
+    id: "3",
+    title: "Image tools",
+    description:
+      "A collection of image manipulation tools built with Next.js and Tailwind CSS. It includes features like image compression to desired size in KB and format conversion from jpeg to PNG, providing users with a simple and efficient way to edit their images online.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Canvas API"],
+    github: "https://github.com/abunusaybah1/im-convert",
+    demo: "https://im-convert.vercel.app/",
+    image: "/images/im-convert.png",
+    featured: false,
+    slug: "im-convert",
+    overview:
+      " A collection of image manipulation tools built with Next.js and Tailwind CSS. It includes features like image compression to desired size in KB and format conversion from jpeg to PNG, providing users with a simple and efficient way to edit their images online. The application leverages the Canvas API to perform image processing directly in the browser, ensuring a fast and seamless user experience without the need for server-side processing.",
+  },
+  {
+    id: "4",
+    title: "Clause clone",
+    description:
+      "A clone of the Clause legal document management platform, built with Next.js and Tailwind CSS.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/abunusaybah1/clause-clone",
+    demo: "https://clause-clone.vercel.app/",
+    image: "/images/clause-clone.png",
+    featured: false,
+    slug: "clause-clone",
+    overview:
+      " A clone of the Clause legal document management platform, built with Next.js and Tailwind CSS. This project replicates key features of the original platform, such as document creation, editing, and collaboration tools, providing users with a seamless experience for managing their legal documents online.",
+  },
 ];
 
 export const skills: Skill[] = [
@@ -71,7 +97,7 @@ export const personalInfo = {
   name: "Abdulmatiin",
   role: "Frontend Developer",
   bio: "Passionate frontend developer with 3+ years of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
-  email: "ayobamidolapo419@gmail.com",
+  email: "abdulmatiinismail@gmail.com",
   github: "https://github.com/abunusaybah1",
   linkedin: "https://www.linkedin.com/in/abdulmatiin--440aa7260/",
   resume: "files/Abdulmatiin resume.pdf",

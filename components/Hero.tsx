@@ -26,11 +26,11 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="animate-slide-up">
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6">
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 mt-4">
             Hi, I'm {personalInfo.name}
           </h1>
           <p className="text-xl sm:text-3xl lg:text-4xl text-white/90 mb-8 font-light">
-            {personalInfo.role}
+            - {personalInfo.role}
           </p>
           <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
             {personalInfo.bio}
