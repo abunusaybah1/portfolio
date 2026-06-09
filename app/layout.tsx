@@ -1,46 +1,28 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Abdulmatiin - Frontend Developer Portfolio",
+  title: "Ismail Abdulmatiin — Frontend Developer",
   description:
-    "Passionate frontend developer with 3+ years of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
-  keywords: [
-    "frontend developer",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "web development",
-    "abdulmatiin",
-    "ismail",
-    "portfolio",
-    "projects",
-    "skills",
-    "experience",
-    "contact",
-  ],
-  authors: [{ name: " Abdulmatiin" }],
+    "Frontend Developer & UI Engineer building high-performance web experiences with React, Next.js, and TypeScript.",
   openGraph: {
-    title: " Abdulmatiin's Portfolio",
-    description:
-      "Passionate frontend developer with 3+ years of experience building scalable web applications.",
+    title: "Ismail Abdulmatiin — Frontend Developer",
+    description: "Building sharp, accessible, production-grade web experiences.",
+    url: "https://abunusaybah.vercel.app",
+    siteName: "IA.dev",
     type: "website",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className="antialiased min-h-screen flex flex-col bg-white text-gray-900 overflow-x-hidden ">
-        <Header />
-        <main className="grow bg-white text-gray-900">{children}</main>
-        <Footer />
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-[#080C14] text-[#F0F4FF] font-display antialiased">
+        {children}
       </body>
     </html>
   );

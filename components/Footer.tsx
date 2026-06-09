@@ -1,90 +1,33 @@
-import Link from "next/link";
-import { personalInfo } from "../lib/data";
+import { personalInfo } from "@/lib/data";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:justify-between gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-white dark:text-gray-100">
-              {personalInfo.name}
-            </h3>
-            <p className="text-gray-400 dark:text-gray-300 mb-4">
-              {personalInfo.bio}
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href={personalInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-200 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
-              >
-                GitHub
-              </a>
-              <span>|</span>
-              <a
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-200 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white dark:text-gray-100">
-              Quick Links
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-400 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="text-gray-400 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-400 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-400 dark:text-gray-300 hover:text-white dark:hover:text-gray-100 transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white dark:text-gray-100">
-              Contact
-            </h4>
-            <p className="text-gray-400 dark:text-gray-300">
-              {personalInfo.email}
-            </p>
-          </div>
+    <footer className="px-8 py-10 border-t border-[rgba(0,229,255,0.15)]">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="font-mono text-[0.85rem] text-[#00E5FF]">
+          {personalInfo.handle}
         </div>
-        <div className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center text-gray-400 dark:text-gray-300">
-          <p>
-            &copy; {new Date().getFullYear()} | {personalInfo.name}
-          </p>
+        <div className="text-[0.8rem] text-[#8892A4]">
+          © {year} Ismail Abdulmatiin · Built with Next.js + Tailwind
+        </div>
+        <div className="flex gap-6">
+          {[
+            { label: "Top", href: "#home" },
+            { label: "GitHub", href: personalInfo.github, external: true },
+            { label: "Live", href: personalInfo.live, external: true },
+          ].map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noreferrer" : undefined}
+              className="text-[0.8rem] text-[#8892A4] transition-colors hover:text-[#00E5FF]"
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

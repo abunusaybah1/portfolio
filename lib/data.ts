@@ -1,104 +1,157 @@
-import { Project, Skill, Experience } from "../types";
+export const personalInfo = {
+  name: "Ismail Abdulmatiin",
+  handle: "IA.dev",
+  role: "Frontend Developer & UI Engineer",
+  tagline:
+    "I build high-performance, accessible web experiences with React, Next.js, and TypeScript. Clean code. Sharp interfaces. Real impact.",
+  email: "abdulmatiin@gmail.com",
+  github: "https://github.com/abunusaybah1",
+  live: "https://abunusaybah.vercel.app",
+  location: "Nigeria 🇳🇬",
+  locationLabel: "Nigeria · Remote Worldwide",
+  available: true,
+  stats: [
+    { num: "2+", label: "Years Experience" },
+    { num: "15+", label: "Projects Built" },
+    { num: "5+", label: "Technologies" },
+  ],
+};
+
+export const aboutDetails = [
+  { label: "Status", value: "Open to work" },
+  { label: "Speciality", value: "Frontend / UI Engineering" },
+  { label: "Stack", value: "React · Next.js · TypeScript" },
+  { label: "Styling", value: "Tailwind · CSS · Framer" },
+  { label: "Backend", value: "Node.js · REST · Firebase" },
+  { label: "Based in", value: "Nigeria 🇳🇬" },
+  { label: "Languages", value: "English · Arabic" },
+];
+
+export interface Skill {
+  name: string;
+  icon: string;
+  level: string;
+  percent: number;
+}
+
+export const skills: Skill[] = [
+  { name: "React", icon: "⚛️", level: "Expert", percent: 92 },
+  { name: "Next.js", icon: "▲", level: "Advanced", percent: 88 },
+  { name: "TypeScript", icon: "🔷", level: "Advanced", percent: 85 },
+  { name: "Tailwind", icon: "🌊", level: "Expert", percent: 95 },
+  { name: "JavaScript", icon: "💛", level: "Expert", percent: 93 },
+  { name: "CSS", icon: "🎨", level: "Expert", percent: 90 },
+  { name: "Firebase", icon: "🔥", level: "Intermediate", percent: 72 },
+  { name: "Node.js", icon: "🟢", level: "Intermediate", percent: 68 },
+  { name: "Git", icon: "🐙", level: "Advanced", percent: 88 },
+  { name: "Vite", icon: "⚡", level: "Advanced", percent: 85 },
+  { name: "Framer", icon: "🎭", level: "Intermediate", percent: 70 },
+  { name: "REST API", icon: "🗄️", level: "Advanced", percent: 82 },
+];
+
+export interface Experience {
+  period: string;
+  title: string;
+  company: string;
+  description: string;
+  tags: string[];
+}
+
+export const experience: Experience[] = [
+  {
+    period: "2024 — Present",
+    title: "Frontend Developer",
+    company: "Freelance / Contract",
+    description:
+      "Building production web applications for clients across Nigeria and internationally. Delivering high-quality React and Next.js solutions, from design system implementation to full-stack feature development.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
+  },
+  {
+    period: "2023 — 2024",
+    title: "React Developer",
+    company: "Personal Projects & Open Source",
+    description:
+      "Developed and shipped multiple portfolio and SaaS-style projects. Built production-grade React applications with a focus on performance, clean architecture, and modern UI patterns.",
+    tags: ["React", "Vite", "JavaScript", "CSS"],
+  },
+  {
+    period: "2022 — 2023",
+    title: "Frontend Engineering — Self-Taught Journey",
+    company: "Continuous Learning",
+    description:
+      "Mastered the fundamentals of HTML, CSS, and JavaScript through intensive self-study, building projects at every stage. Progressed into React, TypeScript, and modern tooling.",
+    tags: ["HTML", "CSS", "JavaScript", "React"],
+  },
+];
+
+export interface Project {
+  num: string;
+  title: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  live?: string;
+  featured?: boolean;
+  status?: "live" | "github" | "wip";
+}
 
 export const projects: Project[] = [
   {
-    id: "1",
-    title: "Rezume",
+    num: "001",
+    title: "Developer Portfolio Platform",
     description:
-      " A modern resume builder application that allows users to create and customize their resumes with ease. It features a user-friendly interface, real-time preview, and various templates to choose from.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/abunusaybah1/rezume",
-    demo: "https://rezume-pi.vercel.app/",
-    overview:
-      " Rezume is a user-friendly resume builder that simplifies the process of creating professional resumes. With a variety of templates and real-time preview, users can easily customize their resumes to stand out to potential employers.",
-    image: "/images/rezume.png",
+      "A production-grade portfolio platform built with Next.js 16, TypeScript, and Tailwind CSS 4. Features SSR, SEO optimization, GitHub integration, and flexbox-only layouts.",
+    tags: ["Next.js 16", "TypeScript", "Tailwind CSS", "Vercel"],
+    github: "https://github.com/abunusaybah1/portfolio",
+    live: "https://abunusaybah.vercel.app",
     featured: true,
-    slug: "rezume",
+    status: "live",
   },
   {
-    id: "2",
+    num: "002",
+    title: "React Portfolio v1",
+    description:
+      "First iteration of the portfolio built with React and Vite. Clean component architecture with custom CSS animations and a modular design system.",
+    tags: ["React", "Vite", "JavaScript", "CSS"],
+    github: "https://github.com/abunusaybah1/my-portfolio",
+    status: "github",
+  },
+  {
+    num: "003",
+    title: "E-Commerce UI",
+    description:
+      "A modern storefront UI with product filtering, cart management, and checkout flow. Built with React, custom hooks, and a mobile-first design approach.",
+    tags: ["React", "Context API", "Tailwind"],
+    github: "#",
+    live: "#",
+    status: "live",
+  },
+  {
+    num: "004",
+    title: "Dashboard Analytics",
+    description:
+      "A data-rich analytics dashboard with charts, real-time stats, and filterable tables. TypeScript-first with a strong component API and responsive layout.",
+    tags: ["TypeScript", "Recharts", "Next.js", "Tailwind"],
+    github: "#",
+    status: "github",
+  },
+  {
+    num: "005",
+    title: "Auth System",
+    description:
+      "A complete authentication system with JWT, protected routes, role-based access, and Firebase integration. Reusable auth hooks and context pattern.",
+    tags: ["React", "Firebase", "TypeScript", "JWT"],
+    github: "#",
+    status: "github",
+  },
+  {
+    num: "006",
     title: "Task Management App",
     description:
-      " A collaborative task management application that allows teams to organize and track their work efficiently. It includes features like boards for organization,columns for tasks status and cards to hold task information.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/abunusaybah1/ckb",
-    demo: "https://ckb-nine.vercel.app/",
-    image: "/images/ckb.png",
-    featured: true,
-    slug: "ckb",
-    overview:
-      " CKB is a collaborative task management app designed to help teams organize and track their work efficiently. With features like boards, columns, and cards, CKB provides a flexible and intuitive way to manage projects and tasks, fostering better collaboration and productivity among team members.",
-  },
-  {
-    id: "3",
-    title: "Image tools",
-    description:
-      "A collection of image manipulation tools built with Next.js and Tailwind CSS. It includes features like image compression to desired size in KB and format conversion from jpeg to PNG, providing users with a simple and efficient way to edit their images online.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Canvas API"],
-    github: "https://github.com/abunusaybah1/im-convert",
-    demo: "https://im-convert.vercel.app/",
-    image: "/images/im-convert.png",
-    featured: false,
-    slug: "im-convert",
-    overview:
-      " A collection of image manipulation tools built with Next.js and Tailwind CSS. It includes features like image compression to desired size in KB and format conversion from jpeg to PNG, providing users with a simple and efficient way to edit their images online. The application leverages the Canvas API to perform image processing directly in the browser, ensuring a fast and seamless user experience without the need for server-side processing.",
-  },
-  {
-    id: "4",
-    title: "Clause clone",
-    description:
-      "A clone of the Clause legal document management platform, built with Next.js and Tailwind CSS.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/abunusaybah1/clause-clone",
-    demo: "https://clause-clone.vercel.app/",
-    image: "/images/clause-clone.png",
-    featured: false,
-    slug: "clause-clone",
-    overview:
-      " A clone of the Clause legal document management platform, built with Next.js and Tailwind CSS. This project replicates key features of the original platform, such as document creation, editing, and collaboration tools, providing users with a seamless experience for managing their legal documents online.",
+      "A full-featured task manager with drag-and-drop boards, priority labels, due dates, and real-time updates via Firebase. Built with Next.js and Tailwind CSS.",
+    tags: ["Next.js", "TypeScript", "Firebase", "Tailwind"],
+    github: "#",
+    live: "#",
+    status: "live",
   },
 ];
-
-export const skills: Skill[] = [
-  { category: "Frontend", name: "React.js", level: 5 },
-  { category: "Frontend", name: "Next.js", level: 5 },
-  { category: "Frontend", name: "TypeScript", level: 5 },
-  { category: "Frontend", name: "Tailwind CSS", level: 5 },
-  { category: "Tools", name: "Git/GitHub", level: 5 },
-  { category: "Frontend", name: "Sass", level: 3 },
-  { category: "Tools", name: "Visual Studio Code", level: 5 },
-  { category: "Tools", name: "Figma", level: 3 },
-  { category: "Frontend", name: "React Native", level: 4 },
-  { category: "Frontend", name: "Zustand", level: 3 },
-];
-
-export const experiences: Experience[] = [
-  //   {
-  //     id: "1",
-  //     role: "Senior Frontend Developer",
-  //     company: "Tech Corp",
-  //     period: "2022 - Present",
-  //     description:
-  //       "Led development of multiple React applications, mentored junior developers, and implemented best practices for code quality and performance.",
-  //     technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-  //   },
-  //   {
-  //     id: "2",
-  //     role: "Frontend Developer",
-  //     company: "Startup Inc",
-  //     period: "2020 - 2022",
-  //     description:
-  //       "Developed responsive web applications using modern JavaScript frameworks, collaborated with design teams, and optimized application performance.",
-  //     technologies: ["React", "Vue.js", "Sass", "Webpack"],
-  //   },
-];
-
-export const personalInfo = {
-  name: "Abdulmatiin",
-  role: "Frontend Developer",
-  bio: "Passionate frontend developer with 3+ years of experience building scalable web applications. Expertise in React, Next.js, and modern web technologies.",
-  email: "abdulmatiinismail@gmail.com",
-  github: "https://github.com/abunusaybah1",
-  linkedin: "https://www.linkedin.com/in/abdulmatiin--440aa7260/",
-  resume: "files/Abdulmatiin resume.pdf",
-};
