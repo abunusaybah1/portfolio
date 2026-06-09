@@ -5,9 +5,9 @@ import { personalInfo } from "@/lib/data";
 
 const codeLines = [
   `<span class="text-purple-400">const</span> developer = {`,
-  `  name: <span class="text-green-300">"Ismail Abdulmatiin"</span>,`,
+  `  name: <span class="text-green-300">"Abdulmatiin"</span>,`,
   `  role: <span class="text-green-300">"Frontend Developer"</span>,`,
-  `  stack: [<span class="text-green-300">"React"</span>, <span class="text-green-300">"Next.js"</span>],`,
+  `  stack: [<span class="text-green-300">"React"</span>, <span class="text-green-300">"Next.js"</span>, <span class="text-green-300">"Typescript"</span>, <span class="text-green-300">"Supabase"</span>, <span class="text-green-300">"Tailwind CSS"</span>],`,
   `  available: <span class="text-purple-400">true</span>,`,
   `  <span class="text-[#00E5FF]">build</span>() {`,
   `    <span class="text-purple-400">return</span> <span class="text-green-300">"amazing products"</span>;`,
@@ -45,7 +45,6 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center px-8 relative overflow-hidden"
     >
-      {/* Grid background */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -54,7 +53,6 @@ export default function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-      {/* Radial glow */}
       <div
         className="absolute inset-0"
         style={{
@@ -65,22 +63,16 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto w-full pt-20 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center gap-16">
-          {/* Left — text */}
           <div className="flex-1">
-            {/* Status badge */}
-            <div className="inline-flex items-center gap-2 font-mono text-[0.75rem] text-[#00E5FF] border border-[rgba(0,229,255,0.15)] px-3 py-1.5 rounded-[2px] mb-8 tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-[#00E5FF] pulse-dot" />
-              Available for work
-            </div>
-
             <h1 className="text-[clamp(3rem,7vw,6rem)] font-bold leading-[1.05] tracking-[-0.03em] mb-3">
               Ismail
               <br />
               <span className="text-[#00E5FF]">Abdulmatiin</span>
             </h1>
 
-            <div className="font-mono text-[clamp(0.9rem,2vw,1.1rem)] text-[#8892A4] mb-6 border-l-2 border-[#00E5FF] pl-4">
-              &#47;&#47; Frontend Developer &amp; UI Engineer
+            <div className="font-mono text-[clamp(0.9rem,2vw,1.1rem)] text-[#8892A4] mb-6">
+              &#123;&#47;&#42; Frontend Developer &amp; Backend Enthusiast
+              &#42;&#47;&#125;
             </div>
 
             <p className="text-[clamp(1rem,1.8vw,1.15rem)] text-[#8892A4] max-w-xl leading-[1.8] mb-10">
@@ -90,13 +82,13 @@ export default function Hero() {
             <div className="flex gap-4 flex-wrap mb-12">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-7 py-3 bg-[#00E5FF] text-black font-semibold text-[0.9rem] rounded-[4px] transition-all hover:bg-[#00c4d9] hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-7 py-3 bg-[#00E5FF] text-black font-semibold text-[0.9rem] rounded-sm transition-all hover:bg-[#00c4d9] hover:-translate-y-0.5"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-7 py-3 border border-[rgba(0,229,255,0.15)] text-[#F0F4FF] text-[0.9rem] rounded-[4px] transition-all hover:border-[#00E5FF] hover:text-[#00E5FF]"
+                className="inline-flex items-center gap-2 px-7 py-3 border border-[rgba(0,229,255,0.15)] text-[#F0F4FF] text-[0.9rem] rounded-sm transition-all hover:border-[#00E5FF] hover:text-[#00E5FF]"
               >
                 Get in Touch
               </a>
@@ -116,20 +108,19 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — code card */}
-          <div className="hidden lg:block w-[340px] flex-shrink-0">
+          <div className="hidden lg:block w-85 shrink-0">
             <div className="bg-[#0D1421] border border-[rgba(0,229,255,0.15)] rounded-lg overflow-hidden">
               <div className="bg-[#111827] px-4 py-2.5 flex items-center gap-2">
-                <span className="w-[10px] h-[10px] rounded-full bg-[#FF5F56]" />
-                <span className="w-[10px] h-[10px] rounded-full bg-[#FFBD2E]" />
-                <span className="w-[10px] h-[10px] rounded-full bg-[#27C93F]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
                 <span className="ml-3 font-mono text-[0.7rem] text-[#8892A4]">
                   developer.ts
                 </span>
               </div>
               <div
                 ref={codeRef}
-                className="p-5 font-mono text-[0.78rem] leading-[1.8] text-[#8892A4] min-h-[220px]"
+                className="p-5 font-mono text-[0.78rem] leading-[1.8] text-[#8892A4] min-h-55"
               />
             </div>
           </div>
