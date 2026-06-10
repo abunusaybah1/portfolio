@@ -3,12 +3,24 @@
 import { useState } from "react";
 import { personalInfo } from "@/lib/data";
 import { useReveal } from "@/lib/useReveal";
+import { MdMail } from "react-icons/md";
+import { FaLocationPin } from "react-icons/fa6";
+import { BsClock } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 const contactItems = [
-  { icon: "✉", label: "Email", value: "abdulmatiin@gmail.com" },
-  { icon: "⌥", label: "GitHub", value: "github.com/abunusaybah1" },
-  { icon: "◎", label: "Location", value: personalInfo.locationLabel },
-  { icon: "◷", label: "Response Time", value: "Usually within 24 hours" },
+  { icon: <MdMail />, label: "Email", value: "ayobamidolapo419@gmail.com" },
+  { icon: <FaGithub />, label: "GitHub", value: "github.com/abunusaybah1" },
+  {
+    icon: <FaLocationPin />,
+    label: "Location",
+    value: personalInfo.locationLabel,
+  },
+  {
+    icon: <BsClock />,
+    label: "Response Time",
+    value: "Usually within 24 hours",
+  },
 ];
 
 export default function Contact() {
@@ -33,19 +45,18 @@ export default function Contact() {
         <div className="reveal w-10 h-0.5 bg-[#00E5FF] mb-12" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Form */}
           <form onSubmit={handleSubmit} className="reveal flex flex-col gap-4">
             {[
-              { label: "YOUR NAME", type: "text", placeholder: "John Doe" },
+              { label: "YOUR NAME", type: "text", placeholder: "Abdulmatiin" },
               {
                 label: "EMAIL ADDRESS",
                 type: "email",
-                placeholder: "john@company.com",
+                placeholder: "abunusaybah@nahjinst.com.ng",
               },
               {
                 label: "PROJECT TYPE",
                 type: "text",
-                placeholder: "Frontend Development / UI Design",
+                placeholder: "E-Commerce Website, Portfolio, etc.",
               },
             ].map((field) => (
               <div key={field.label} className="flex flex-col gap-1.5">
@@ -75,7 +86,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className={`self-start inline-flex items-center gap-2 px-7 py-3 rounded-[4px] font-semibold text-[0.9rem] transition-all ${
+              className={`self-start inline-flex items-center gap-2 px-7 py-3 rounded-sm font-semibold text-[0.9rem] transition-all ${
                 sent
                   ? "bg-[#00FF87] text-black"
                   : "bg-[#00E5FF] text-black hover:bg-[#00c4d9] hover:-translate-y-0.5"
@@ -85,14 +96,13 @@ export default function Contact() {
             </button>
           </form>
 
-          {/* Info */}
           <div className="reveal flex flex-col gap-4">
             {contactItems.map((item) => (
               <div
                 key={item.label}
                 className="flex items-center gap-4 p-5 bg-[#111827] border border-[rgba(0,229,255,0.15)] rounded-lg transition-colors hover:border-[#00E5FF]"
               >
-                <div className="w-10 h-10 bg-[rgba(0,229,255,0.12)] rounded-[6px] flex items-center justify-center text-[#00E5FF] text-base flex-shrink-0">
+                <div className="w-10 h-10 bg-[rgba(0,229,255,0.12)] rounded-md flex items-center justify-center text-[#00E5FF] text-base shrink-0">
                   {item.icon}
                 </div>
                 <div>

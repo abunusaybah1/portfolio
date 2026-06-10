@@ -1,52 +1,79 @@
+import type { IconType } from "react-icons";
+import { FaCode, FaCss3Alt, FaFigma } from "react-icons/fa";
+import {
+  SiGit,
+  SiJavascript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+} from "react-icons/si";
+
 export const personalInfo = {
   name: "Ismail Abdulmatiin",
-  handle: "IA.dev",
   role: "Frontend Developer & UI Engineer",
   tagline:
     "I build high-performance, accessible web experiences with React, Next.js, and TypeScript. Clean code. Sharp interfaces. Real impact.",
   email: "abdulmatiin@gmail.com",
   github: "https://github.com/abunusaybah1",
   live: "https://abunusaybah.vercel.app",
-  location: "Nigeria 🇳🇬",
-  locationLabel: "Nigeria · Remote Worldwide",
+  location: "Lagos, Nigeria",
+  locationLabel: "Lagos, Nigeria · Remote",
   available: true,
   stats: [
-    { num: "2+", label: "Years Experience" },
-    { num: "15+", label: "Projects Built" },
-    { num: "5+", label: "Technologies" },
+    { num: "3+", label: "Years Experience" },
+    { num: "5+", label: "Projects Built" },
+    { num: "7+", label: "Technologies" },
   ],
 };
 
 export const aboutDetails = [
-  { label: "Status", value: "Open to work" },
-  { label: "Speciality", value: "Frontend / UI Engineering" },
-  { label: "Stack", value: "React · Next.js · TypeScript" },
-  { label: "Styling", value: "Tailwind · CSS · Framer" },
-  { label: "Backend", value: "Node.js · REST · Firebase" },
-  { label: "Based in", value: "Nigeria 🇳🇬" },
-  { label: "Languages", value: "English · Arabic" },
+  { label: "Speciality", value: "Frontend Dev." },
+  { label: "Stack", value: "React.js · Next.js · TypeScript · Supabase" },
+  { label: "Styling", value: "Tailwind · CSS" },
+  { label: "Backend", value: "Node.js · REST · Supabase" },
+  { label: "Based in", value: "Lagos, Nigeria" },
+  { label: "Languages", value: "English · Yoruba · Arabic" },
 ];
 
 export interface Skill {
   name: string;
-  icon: string;
+  icon: IconType;
   level: string;
   percent: number;
 }
 
 export const skills: Skill[] = [
-  { name: "React", icon: "⚛️", level: "Expert", percent: 92 },
-  { name: "Next.js", icon: "▲", level: "Advanced", percent: 88 },
-  { name: "TypeScript", icon: "🔷", level: "Advanced", percent: 85 },
-  { name: "Tailwind", icon: "🌊", level: "Expert", percent: 95 },
-  { name: "JavaScript", icon: "💛", level: "Expert", percent: 93 },
-  { name: "CSS", icon: "🎨", level: "Expert", percent: 90 },
-  { name: "Firebase", icon: "🔥", level: "Intermediate", percent: 72 },
-  { name: "Node.js", icon: "🟢", level: "Intermediate", percent: 68 },
-  { name: "Git", icon: "🐙", level: "Advanced", percent: 88 },
-  { name: "Vite", icon: "⚡", level: "Advanced", percent: 85 },
-  { name: "Framer", icon: "🎭", level: "Intermediate", percent: 70 },
-  { name: "REST API", icon: "🗄️", level: "Advanced", percent: 82 },
+  {
+    name: "JavaScript",
+    icon: SiJavascript,
+    level: "Expert",
+    percent: 93,
+  },
+  { name: "React", icon: SiReact, level: "Expert", percent: 92 },
+  { name: "Next.js", icon: SiNextdotjs, level: "Advanced", percent: 88 },
+  {
+    name: "TypeScript",
+    icon: SiTypescript,
+    level: "Advanced",
+    percent: 85,
+  },
+  { name: "CSS", icon: FaCss3Alt, level: "Expert", percent: 90 },
+  { name: "Tailwind", icon: SiTailwindcss, level: "Expert", percent: 100 },
+  { name: "Figma", icon: FaFigma, level: "Expert", percent: 95 },
+  { name: "Git", icon: SiGit, level: "Expert", percent: 90 },
+  {
+    name: "Supabase",
+    icon: SiSupabase,
+    level: "Intermediate",
+    percent: 72,
+  },
+  { name: "REST API", icon: FaCode, level: "Advanced", percent: 82 },
+  { name: "Node.js", icon: SiNodedotjs, level: "Beginner", percent: 20 },
+  { name: "SEO", icon: FaCode, level: "Intermediate", percent: 70 },
 ];
 
 export interface Experience {
@@ -59,28 +86,46 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    period: "2024 — Present",
+    period: "Present",
     title: "Frontend Developer",
-    company: "Freelance / Contract",
+    company: "Projects & Collaborations",
     description:
-      "Building production web applications for clients across Nigeria and internationally. Delivering high-quality React and Next.js solutions, from design system implementation to full-stack feature development.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
+      "Working on real products both solo and in teams — covering UI implementation, component architecture, and frontend integration with backends. Stack has grown from React to Next.js, Tailwind, and Supabase.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
   },
   {
-    period: "2023 — 2024",
-    title: "React Developer",
-    company: "Personal Projects & Open Source",
+    period: "2023 — Present",
+    title: "Founder & Frontend Tutor",
+    company: "Almattech Academy",
     description:
-      "Developed and shipped multiple portfolio and SaaS-style projects. Built production-grade React applications with a focus on performance, clean architecture, and modern UI patterns.",
-    tags: ["React", "Vite", "JavaScript", "CSS"],
+      "Started a frontend development training program, handling curriculum design and student mentorship. Teaching HTML, CSS, and JavaScript to beginners from scratch.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Tailwind",
+      "Git",
+      "GitHub",
+      "React",
+    ],
   },
   {
-    period: "2022 — 2023",
-    title: "Frontend Engineering — Self-Taught Journey",
-    company: "Continuous Learning",
+    period: "Oct 2025 — Feb 2026",
+    title: "Frontend ProDev Program",
+    company: "ALX Africa",
     description:
-      "Mastered the fundamentals of HTML, CSS, and JavaScript through intensive self-study, building projects at every stage. Progressed into React, TypeScript, and modern tooling.",
-    tags: ["HTML", "CSS", "JavaScript", "React"],
+      "Completed an intensive frontend engineering track covering React, Next.js, and TypeScript. Built and shipped projects as part of the curriculum.",
+    tags: ["React", "Next.js", "TypeScript"],
+  },
+
+  {
+    period: "2020 — 2024",
+    title: "Self-Taught — Foundation Years",
+    company: "Properdot (Udemy), Tutorial Republic, YouTube, etc",
+    description:
+      "Started learning on a phone in 2020 with HTML, CSS, Bootstrap, and JavaScript. Got a laptop in 2024 and levelled up into React, Tailwind, and Git. Four years of building things before the tools got comfortable.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
   },
 ];
 
@@ -94,64 +139,82 @@ export interface Project {
   featured?: boolean;
   status?: "live" | "github" | "wip";
 }
-
 export const projects: Project[] = [
   {
-    num: "001",
-    title: "Developer Portfolio Platform",
+    num: "01",
+    title: "Do-Am",
     description:
-      "A production-grade portfolio platform built with Next.js 16, TypeScript, and Tailwind CSS 4. Features SSR, SEO optimization, GitHub integration, and flexbox-only layouts.",
-    tags: ["Next.js 16", "TypeScript", "Tailwind CSS", "Vercel"],
-    github: "https://github.com/abunusaybah1/portfolio",
-    live: "https://abunusaybah.vercel.app",
+      "A civic tech platform for reporting and tracking social problems in Nigeria. Think GitHub for public issues.",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    github: "https://github.com/abunusaybah1/doam",
+    status: "github",
+  },
+  {
+    num: "02",
+    title: "CKB",
+    description:
+      "Built as part of my frontend internship at Talenvo. This project is basically a Trello clone with features such as cards, columns, and boards creation and editing (CRUD). Live and deployed on Vercel.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    live: "https://ckb-nine.vercel.app",
+    status: "live",
+  },
+  {
+    num: "03",
+    title: "Clause Clone",
+    description:
+      "A pixel-accurate landing page clone of Clause. Built to practice implementing complex UI from Figma to code.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/abunusaybah1/clause-clone",
+    live: "https://clause-clone.vercel.app",
+    status: "live",
+  },
+  {
+    num: "04",
+    title: "Im-convert",
+    description:
+      "An image utility tool — compress images and convert between JPEG and PNG formats, all in the browser.",
+    tags: ["Next.js", "TypeScript"],
+    github: "https://github.com/abunusaybah1/im-convert",
+    live: "https://im-convert.vercel.app",
+    status: "live",
+  },
+  {
+    num: "05",
+    title: "Quant",
+    description:
+      "A WhatsApp-based academic assistant for students. Converting clean UI from Figma to a clean, responsive Landing page with well structured layout.",
+    tags: ["React", "Tailwind CSS"],
+    github: "https://github.com/USEQUANT/usequant",
+    status: "github",
     featured: true,
-    status: "live",
   },
   {
-    num: "002",
-    title: "React Portfolio v1",
+    num: "06",
+    title: "Rezume",
     description:
-      "First iteration of the portfolio built with React and Vite. Clean component architecture with custom CSS animations and a modular design system.",
-    tags: ["React", "Vite", "JavaScript", "CSS"],
-    github: "https://github.com/abunusaybah1/my-portfolio",
+      "A resume builder that generates a formatted resume from user inputs. Built as my ALX frontend capstone project.",
+    tags: ["React", "TypeScript", "Tailwind"],
+    github: "https://github.com/abunusaybah1/rezume",
+    live: "https://rezume-app.vercel.app",
+    status: "live",
+    featured: true,
+  },
+  {
+    num: "07",
+    title: "Darsiy",
+    description:
+      "A student study guide and resource management app, currently in active development.",
+    tags: ["Next.js", "TypeScript"],
+    github: "https://github.com/abunusaybah1/darsiy",
     status: "github",
   },
   {
-    num: "003",
-    title: "E-Commerce UI",
+    num: "08",
+    title: "BuyElec",
     description:
-      "A modern storefront UI with product filtering, cart management, and checkout flow. Built with React, custom hooks, and a mobile-first design approach.",
-    tags: ["React", "Context API", "Tailwind"],
-    github: "#",
-    live: "#",
-    status: "live",
-  },
-  {
-    num: "004",
-    title: "Dashboard Analytics",
-    description:
-      "A data-rich analytics dashboard with charts, real-time stats, and filterable tables. TypeScript-first with a strong component API and responsive layout.",
-    tags: ["TypeScript", "Recharts", "Next.js", "Tailwind"],
-    github: "#",
+      "A modern electronics e-store built with Next.js and TypeScript.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/abunusaybah1/buyelec",
     status: "github",
-  },
-  {
-    num: "005",
-    title: "Auth System",
-    description:
-      "A complete authentication system with JWT, protected routes, role-based access, and Firebase integration. Reusable auth hooks and context pattern.",
-    tags: ["React", "Firebase", "TypeScript", "JWT"],
-    github: "#",
-    status: "github",
-  },
-  {
-    num: "006",
-    title: "Task Management App",
-    description:
-      "A full-featured task manager with drag-and-drop boards, priority labels, due dates, and real-time updates via Firebase. Built with Next.js and Tailwind CSS.",
-    tags: ["Next.js", "TypeScript", "Firebase", "Tailwind"],
-    github: "#",
-    live: "#",
-    status: "live",
   },
 ];

@@ -13,21 +13,19 @@ export default function Experience() {
           03 — Experience
         </p>
         <h2 className="reveal text-[clamp(2rem,4vw,2.8rem)] font-bold tracking-[-0.02em] mb-4">
-          Where I&apos;ve worked
+          My journey so far
         </h2>
         <div className="reveal w-10 h-0.5 bg-[#00E5FF] mb-12" />
 
         <div className="relative">
-          {/* Timeline vertical line */}
           <div className="absolute left-0 top-0 bottom-0 w-px bg-[rgba(0,229,255,0.15)]" />
 
           <div className="space-y-12">
-            {experience.map((exp) => (
-              <div key={exp.period} className="reveal pl-8 relative">
-                {/* Dot */}
-                <div className="absolute left-[-4px] top-1.5 w-[9px] h-[9px] bg-[#00E5FF] rounded-full border-2 border-[#080C14]" />
+            {experience.map((exp, i) => (
+              <div key={i} className="reveal pl-8 relative">
+                <div className="absolute -left-1 top-1.5 w-2.25 h-2.25 bg-[#00E5FF] rounded-full border-2 border-[#080C14]" />
 
-                <div className="font-mono text-[0.72rem] text-[#00E5FF] tracking-[0.05em] mb-1.5">
+                <div className="font-mono text-[0.72rem] text-[#00E5FF] tracking-wider mb-1.5">
                   {exp.period}
                 </div>
                 <div className="text-[1.15rem] font-semibold mb-1">

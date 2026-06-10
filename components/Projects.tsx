@@ -2,6 +2,8 @@
 
 import { projects, type Project } from "@/lib/data";
 import { useReveal } from "@/lib/useReveal";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -22,10 +24,10 @@ function ProjectCard({ project }: { project: Project }) {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="w-7 h-7 border border-[rgba(0,229,255,0.15)] rounded-[4px] flex items-center justify-center text-[0.75rem] text-[#8892A4] transition-all hover:text-[#00E5FF] hover:border-[#00E5FF]"
+                className="w-7 h-7 border border-[rgba(0,229,255,0.15)] rounded-sm flex items-center justify-center text-[0.75rem] text-[#8892A4] transition-all hover:text-[#00E5FF] hover:border-[#00E5FF]"
                 aria-label="GitHub"
               >
-                ⌥
+                <FaGithub />
               </a>
             )}
             {project.live && (
@@ -33,10 +35,10 @@ function ProjectCard({ project }: { project: Project }) {
                 href={project.live}
                 target="_blank"
                 rel="noreferrer"
-                className="w-7 h-7 border border-[rgba(0,229,255,0.15)] rounded-[4px] flex items-center justify-center text-[0.75rem] text-[#8892A4] transition-all hover:text-[#00E5FF] hover:border-[#00E5FF]"
+                className="w-7 h-7 border border-[rgba(0,229,255,0.15)] rounded-sm flex items-center justify-center text-[0.75rem] text-[#8892A4] transition-all hover:text-[#00E5FF] hover:border-[#00E5FF]"
                 aria-label="Live"
               >
-                ↗
+                <FiExternalLink />
               </a>
             )}
           </div>

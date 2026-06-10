@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/lib/data";
+import Image from "next/image";
+import Avatar from "@/public/images/avatar.png";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -30,13 +32,7 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        {/* Logo */}
-        <a
-          href="#home"
-          className="font-mono text-base tracking-tight text-[#00E5FF]"
-        >
-          <span className="text-[#F0F4FF]">IA</span>.dev
-        </a>
+        <Image src={Avatar} alt="Abdulmatiin" width={40} height={40} />
 
         {/* Desktop links */}
         <ul className="hidden md:flex gap-8 list-none">
@@ -52,39 +48,35 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
         <a
           href="#contact"
-          className="hidden md:inline-block px-4 py-2 border border-[#00E5FF] text-[#00E5FF] font-mono text-[0.82rem] rounded-[4px] transition-all hover:bg-[#00E5FF] hover:text-black"
+          className="hidden md:inline-block px-4 py-2 border border-[#00E5FF] text-[#00E5FF] font-mono text-[0.82rem] rounded-sm transition-all hover:bg-[#00E5FF] hover:text-black"
         >
           Hire me
         </a>
-
-        {/* Hamburger */}
         <button
-          className="md:hidden flex flex-col gap-[5px] p-1 cursor-pointer"
+          className="md:hidden flex flex-col gap-1.25 p-1 cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <span
-            className={`w-6 h-[2px] bg-[#F0F4FF] transition-all duration-300 ${
-              menuOpen ? "rotate-45 translate-y-[7px]" : ""
+            className={`w-6 h-0.5 bg-[#F0F4FF] transition-all duration-300 ${
+              menuOpen ? "rotate-45 translate-y-1.75" : ""
             }`}
           />
           <span
-            className={`w-6 h-[2px] bg-[#F0F4FF] transition-all duration-300 ${
+            className={`w-6 h-0.5 bg-[#F0F4FF] transition-all duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`w-6 h-[2px] bg-[#F0F4FF] transition-all duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
+            className={`w-6 h-0.5 bg-[#F0F4FF] transition-all duration-300 ${
+              menuOpen ? "-rotate-45 -translate-y-1.75]" : ""
             }`}
           />
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-[#080C14] flex flex-col justify-center items-center gap-8">
           {navLinks.map((link) => (

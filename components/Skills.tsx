@@ -21,9 +21,9 @@ export default function Skills() {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="reveal bg-[#111827] border border-[rgba(0,229,255,0.15)] rounded-[6px] p-4 text-center transition-all duration-250 hover:border-[#00E5FF] hover:bg-[rgba(0,229,255,0.06)] hover:-translate-y-1 cursor-default group"
+              className="reveal bg-[#111827] border border-[rgba(0,229,255,0.15)] rounded-md p-4 text-center transition-all duration-250 hover:border-[#00E5FF] hover:bg-[rgba(0,229,255,0.06)] hover:-translate-y-1 cursor-default group"
             >
-              <div className="text-[1.6rem] mb-2">{skill.icon}</div>
+              <skill.icon className="mx-auto mb-2 text-[1.6rem] text-[#00E5FF]" />
               <div className="text-[0.82rem] font-medium text-[#F0F4FF]">
                 {skill.name}
               </div>
