@@ -9,7 +9,6 @@ import {
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
-  SiVite,
 } from "react-icons/si";
 
 export const personalInfo = {
@@ -118,14 +117,13 @@ export const experience: Experience[] = [
       "Completed an intensive frontend engineering track covering React, Next.js, and TypeScript. Built and shipped projects as part of the curriculum.",
     tags: ["React", "Next.js", "TypeScript"],
   },
-
   {
     period: "2020 — 2024",
     title: "Self-Taught — Foundation Years",
-    company: "Properdot (Udemy), Tutorial Republic, YouTube, etc",
+    company: "Properdot (Udemy), Tutorial Republic, YouTube, W3 Schools, etc",
     description:
-      "Started learning on a phone in 2020 with HTML, CSS, Bootstrap, and JavaScript. Got a laptop in 2024 and levelled up into React, Tailwind, and Git. Four years of building things before the tools got comfortable.",
-    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      "Started learning on a phone in 2020 with HTML, CSS, Bootstrap, JavaScript, and jQuery. Got a laptop in 2024 and levelled up into React, Tailwind, and Git. Four years of building things before the tools got comfortable.",
+    tags: ["HTML", "CSS", "JavaScript", "JQuery", "Bootstrap"],
   },
 ];
 
@@ -197,7 +195,7 @@ export const projects: Project[] = [
     github: "https://github.com/abunusaybah1/rezume",
     live: "https://rezume-app.vercel.app",
     status: "live",
-    featured: true,
+    featured: false,
   },
   {
     num: "07",
@@ -208,13 +206,5 @@ export const projects: Project[] = [
     github: "https://github.com/abunusaybah1/darsiy",
     status: "github",
   },
-  {
-    num: "08",
-    title: "BuyElec",
-    description:
-      "A modern electronics e-store built with Next.js and TypeScript.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    github: "https://github.com/abunusaybah1/buyelec",
-    status: "github",
-  },
+ 
 ];
