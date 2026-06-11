@@ -80,26 +80,19 @@ export default function About() {
           <div className="reveal bg-[#0D1421] border border-[rgba(0,229,255,0.15)] rounded-lg p-8">
             {aboutDetails.map((row, i) => (
               <div
-                key={row.label}
+                key={i}
                 className={`flex justify-between items-center py-3 ${
                   i < aboutDetails.length - 1
                     ? "border-b border-[rgba(255,255,255,0.05)]"
                     : ""
                 }`}
               >
-                <span className="font-mono text-[0.8rem] text-[#8892A4]">
+                <span className="font-mono text-[0.8rem] text-[#8892A4] f-1 w-[35%]">
                   {row.label}
                 </span>
-                {row.label === "Status" ? (
-                  <span className="inline-flex items-center gap-1.5 bg-[rgba(0,229,255,0.08)] border border-[rgba(0,229,255,0.3)] px-3 py-1 rounded-sm font-mono text-[0.72rem] text-[#00E5FF]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#00FF87] pulse-dot" />
-                    {row.value}
-                  </span>
-                ) : (
-                  <span className="text-[0.85rem] text-[#F0F4FF] text-right">
-                    {row.value}
-                  </span>
-                )}
+                <span className="text-[0.85rem] text-[#F0F4FF] text-right w-[65%]">
+                  {row.value}
+                </span>
               </div>
             ))}
           </div>
