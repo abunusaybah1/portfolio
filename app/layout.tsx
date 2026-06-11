@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 
   // ── Core ──────────────────────────────────────────────────────────────────
   title: {
-    default: "Abdulmatiin — Frontend Developer",
-    template: "%s | Abdulmatiin",
+    default: "Ismail Abdulmatiin — Frontend Developer",
+    template: "%s | Ismail Abdulmatiin",
   },
   description:
     "Frontend Developer specialising in React, Next.js, and TypeScript. Building high-performance, accessible, production-grade web experiences.",
@@ -35,10 +35,12 @@ export const metadata: Metadata = {
     "Lagos developer",
     "Abdulmatiin",
     "Ismail Abdulmatiin",
+    "Abu Nusaybah",
+    "Almattech",
   ],
-  authors: [{ name: "Abdulmatiin Ayobami", url: BASE_URL }],
-  creator: "Abdulmatiin Ayobami",
-  publisher: "Abdulmatiin Ayobami",
+  authors: [{ name: "Ismail Abdulmatiin", url: BASE_URL }],
+  creator: "Ismail Abdulmatiin",
+  publisher: "Ismail Abdulmatiin",
 
   // ── Canonical + Alternate ─────────────────────────────────────────────────
   alternates: {
@@ -65,16 +67,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: BASE_URL,
-    siteName: "Abdulmatiin — Frontend Developer",
-    title: "Abdulmatiin — Frontend Developer",
+    siteName: "Ismail Abdulmatiin — Frontend Developer",
+    title: "Ismail Abdulmatiin — Frontend Developer",
     description:
       "Building sharp, accessible, production-grade web experiences with React, Next.js, and TypeScript.",
     images: [
       {
-        url: "/images/og-image.png", // 1200×630px — create this
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Abdulmatiin — Frontend Developer",
+        alt: "Ismail Abdulmatiin — Frontend Developer",
         type: "image/png",
       },
     ],
@@ -83,11 +85,11 @@ export const metadata: Metadata = {
   // ── Twitter / X Card ──────────────────────────────────────────────────────
   twitter: {
     card: "summary_large_image",
-    title: "Abdulmatiin — Frontend Developer",
+    title: "Ismail Abdulmatiin — Frontend Developer",
     description:
       "Building sharp, accessible, production-grade web experiences with React, Next.js, and TypeScript.",
     images: ["/images/og-image.png"],
-    // creator: "@your_handle", // add when you have a Twitter/X account
+    creator: "@aNameCanBeEmpty",
   },
 
   // ── Icons ─────────────────────────────────────────────────────────────────
@@ -96,7 +98,7 @@ export const metadata: Metadata = {
       { url: "/images/avatar.png", type: "image/png" },
       { url: "/favicon.ico", sizes: "any" }, // fallback
     ],
-    apple: "/images/apple-touch-icon.png", // 180×180px — create this
+    apple: "/images/apple-touch-icon.png", 
     shortcut: "/favicon.ico",
   },
 
@@ -110,7 +112,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Abdulmatiin Ayobami",
+  name: "Ismail Abdulmatiin",
   url: BASE_URL,
   jobTitle: "Frontend Developer",
   description:
