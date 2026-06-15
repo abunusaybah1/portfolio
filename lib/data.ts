@@ -16,8 +16,10 @@ export const personalInfo = {
   role: "Frontend Developer & UI Engineer",
   tagline:
     "I build high-performance, accessible web experiences with React, Next.js, and TypeScript. Clean code. Sharp interfaces. Real impact.",
-  email: "abdulmatiin@gmail.com",
+  email: "ayobamidolapo419@gmail.com",
   github: "https://github.com/abunusaybah1",
+  linkedin: "https://www.linkedin.com/in/abdulmatiin-ismail-440aa7260",
+  twitter: "https://x.com/aNameCanBeEmpty",
   live: "https://abunusaybah.vercel.app",
   location: "Lagos, Nigeria",
   locationLabel: "Lagos, Nigeria · Remote",
@@ -33,7 +35,6 @@ export const aboutDetails = [
   { label: "Speciality", value: "Frontend Dev." },
   { label: "Stack", value: "React.js · Next.js · TypeScript · Supabase" },
   { label: "Styling", value: "Tailwind · CSS" },
-  { label: "Backend", value: "Node.js · REST · Supabase" },
   { label: "Based in", value: "Lagos, Nigeria" },
   { label: "Languages", value: "English · Yoruba · Arabic" },
 ];
@@ -67,12 +68,12 @@ export const skills: Skill[] = [
   {
     name: "Supabase",
     icon: SiSupabase,
-    level: "Intermediate",
+    level: "Advanced",
     percent: 72,
   },
   { name: "REST API", icon: FaCode, level: "Advanced", percent: 82 },
   { name: "Node.js", icon: SiNodedotjs, level: "Beginner", percent: 20 },
-  { name: "SEO", icon: FaCode, level: "Intermediate", percent: 70 },
+  { name: "SEO", icon: FaCode, level: "Advanced", percent: 70 },
 ];
 
 export interface Experience {
@@ -85,7 +86,15 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    period: "Present",
+    period: "2026 — Present",
+    title: "Frontend AI Engineering Intern",
+    company: "Flyrank AI",
+    description:
+      " Working on AI-powered web applications, focusing on frontend development with React, Next.js, and TypeScript. Implementing responsive designs and integrating AI features into user interfaces.",
+    tags: ["React", "Next.js", "TypeScript", "AI Integration"],
+  },
+  {
+    period: "2024 — Present",
     title: "Frontend Developer",
     company: "Projects & Collaborations",
     description:
@@ -206,5 +215,4 @@ export const projects: Project[] = [
     github: "https://github.com/abunusaybah1/darsiy",
     status: "github",
   },
- 
 ];
