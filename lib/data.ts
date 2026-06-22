@@ -94,7 +94,7 @@ export const experience: Experience[] = [
     tags: ["React", "Next.js", "TypeScript", "AI Integration"],
   },
   {
-    period: "2024 — Present",
+    period: "2026 — Present",
     title: "Founder",
     company: "Widaad Labs",
     description:
