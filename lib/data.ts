@@ -95,10 +95,10 @@ export const experience: Experience[] = [
   },
   {
     period: "2024 — Present",
-    title: "Frontend Developer",
-    company: "Projects & Collaborations",
+    title: "Founder",
+    company: "Widaad Labs",
     description:
-      "Working on real products both solo and in teams — covering UI implementation, component architecture, and frontend integration with backends. Stack has grown from React to Next.js, Tailwind, and Supabase.",
+      "Started a software development lab focused on building impactful web applications. Leading projects from ideation to deployment, utilizing a tech stack centered around React, Next.js, and TypeScript, and providing mentorship to junior developers.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
   },
   {
