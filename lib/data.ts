@@ -85,14 +85,14 @@ export interface Experience {
 }
 
 export const experience: Experience[] = [
-  {
-    period: "2026 — Present",
-    title: "Frontend AI Engineering Intern",
-    company: "Flyrank AI",
-    description:
-      " Working on AI-powered web applications, focusing on frontend development with React, Next.js, and TypeScript. Implementing responsive designs and integrating AI features into user interfaces.",
-    tags: ["React", "Next.js", "TypeScript", "AI Integration"],
-  },
+  // {
+  //   period: "2026 — Present",
+  //   title: "Frontend AI Engineering Intern",
+  //   company: "Flyrank AI",
+  //   description:
+  //     " Working on AI-powered web applications, focusing on frontend development with React, Next.js, and TypeScript. Implementing responsive designs and integrating AI features into user interfaces.",
+  //   tags: ["React", "Next.js", "TypeScript", "AI Integration"],
+  // },
   {
     period: "2026 — Present",
     title: "Founder",
