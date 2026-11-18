@@ -1,5 +1,8 @@
 import type { IconType } from "react-icons";
+import { BsRobot } from "react-icons/bs";
 import { FaCode, FaCss3Alt, FaFigma } from "react-icons/fa";
+import { GrVirtualMachine } from "react-icons/gr";
+import { LuBrainCircuit } from "react-icons/lu";
 import {
   SiGit,
   SiJavascript,
@@ -74,6 +77,8 @@ export const skills: Skill[] = [
   { name: "REST API", icon: FaCode, level: "Advanced", percent: 82 },
   { name: "Node.js", icon: SiNodedotjs, level: "Beginner", percent: 20 },
   { name: "SEO", icon: FaCode, level: "Advanced", percent: 70 },
+  { name: "AI Automation", icon: BsRobot, level: "Intermediate", percent: 40 },
+  { name: "ML", icon: LuBrainCircuit, level: "Intermediate", percent: 30 },
 ];
 
 export interface Experience {
@@ -85,21 +90,21 @@ export interface Experience {
 }
 
 export const experience: Experience[] = [
+  // {
+  //   period: "2026 — Present",
+  //   title: "Founder",
+  //   company: "Widaad Labs",
+  //   description:
+  //     "Started a software development lab focused on building impactful web applications. Leading projects from ideation to deployment, utilizing a tech stack centered around React, Next.js, and TypeScript, and providing mentorship to junior developers.",
+  //   tags: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
+  // },
   {
-    period: "2026 — Present",
-    title: "Frontend AI Engineering Intern",
-    company: "Flyrank AI",
+    period: "2026",
+    title: "Siwes Frontend Intern",
+    company: "Lagos State University",
     description:
-      " Working on AI-powered web applications, focusing on frontend development with React, Next.js, and TypeScript. Implementing responsive designs and integrating AI features into user interfaces.",
-    tags: ["React", "Next.js", "TypeScript", "AI Integration"],
-  },
-  {
-    period: "2026 — Present",
-    title: "Founder",
-    company: "Widaad Labs",
-    description:
-      "Started a software development lab focused on building impactful web applications. Leading projects from ideation to deployment, utilizing a tech stack centered around React, Next.js, and TypeScript, and providing mentorship to junior developers.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
+      " Working on web applications, focusing on frontend development with React, Next.js, and TypeScript. Implementing responsive designs and integrating features into user interfaces. I also got introduced to AI and ML during this period.",
+    tags: ["React", "Next.js", "TypeScript", "AI", "Ml"],
   },
   {
     period: "2023 — Present",
@@ -149,15 +154,37 @@ export interface Project {
 export const projects: Project[] = [
   {
     num: "01",
+    title: "Abu Sufyan Al-Alma'iyy Foundation",
+    description:
+      "A landing page for a non-profit organization that provides Quran copies and Islamic books to Muslim individuals, schools, and Mosques. The site covers all the activities of the foundation, including donations, applications, an admin panel, and contact information.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/abusufyanfoundation/abusufyanfound",
+    live: "https://abusufyanfound.vercel.app/",
+    status: "live",
+    featured: true,
+  },
+  {
+    num: "02",
+    title: "Almattech Academy",
+    description:
+      "A fully structured LMS for a frontend development training program that I started. The site covers all the activities of the academy, including courses, applications, an admin panel, and contact information.",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    github: "https://github.com/abunusaybah1/alma-acad",
+    status: "github",
+    featured: true,
+  },
+  {
+    num: "03",
     title: "Do-Am",
     description:
       "A civic tech platform for reporting and tracking social problems in Nigeria. Think GitHub for public issues.",
     tags: ["Next.js", "TypeScript", "Supabase"],
     github: "https://github.com/abunusaybah1/doam",
     status: "github",
+    featured: true,
   },
   {
-    num: "02",
+    num: "04",
     title: "CKB",
     description:
       "Built as part of my frontend internship at Talenvo. This project is basically a Trello clone with features such as cards, columns, and boards creation and editing (CRUD). Live and deployed on Vercel.",
@@ -166,7 +193,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    num: "03",
+    num: "05",
     title: "Clause Clone",
     description:
       "A pixel-accurate landing page clone of Clause. Built to practice implementing complex UI from Figma to code.",
@@ -176,7 +203,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    num: "04",
+    num: "06",
     title: "Im-convert",
     description:
       "An image utility tool — compress images and convert between JPEG and PNG formats, all in the browser.",
@@ -185,18 +212,19 @@ export const projects: Project[] = [
     live: "https://im-convert.vercel.app",
     status: "live",
   },
+  // {
+  //   num: "05",
+  //   title: "Quant",
+  //   description:
+  //     "A WhatsApp-based academic assistant for students. Converting clean UI from Figma to a clean, responsive Landing page with well structured layout.",
+  //   tags: ["React", "Tailwind CSS"],
+  //   github: "https://github.com/USEQUANT/usequant",
+  //   status: "github",
+  //   featured: true,
+  // },
+
   {
-    num: "05",
-    title: "Quant",
-    description:
-      "A WhatsApp-based academic assistant for students. Converting clean UI from Figma to a clean, responsive Landing page with well structured layout.",
-    tags: ["React", "Tailwind CSS"],
-    github: "https://github.com/USEQUANT/usequant",
-    status: "github",
-    featured: true,
-  },
-  {
-    num: "06",
+    num: "07",
     title: "Rezume",
     description:
       "A resume builder that generates a formatted resume from user inputs. Built as my ALX frontend capstone project.",
@@ -206,13 +234,13 @@ export const projects: Project[] = [
     status: "live",
     featured: false,
   },
-  {
-    num: "07",
-    title: "Darsiy",
-    description:
-      "A student study guide and resource management app, currently in active development.",
-    tags: ["Next.js", "TypeScript"],
-    github: "https://github.com/abunusaybah1/darsiy",
-    status: "github",
-  },
+  // {
+  //   num: "08",
+  //   title: "Darsiy",
+  //   description:
+  //     "A student study guide and resource management app, currently in active development.",
+  //   tags: ["Next.js", "TypeScript"],
+  //   github: "https://github.com/abunusaybah1/darsiy",
+  //   status: "github",
+  // },
 ];
